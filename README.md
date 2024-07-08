@@ -1,3 +1,3 @@
 # React + Vite
 
-Deployed URL :
+Deployed URL : https://appleshop-harishcorp.netlify.app/
