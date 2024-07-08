@@ -31,11 +31,11 @@ function Product({prod,data,setFn}) {
                                     toggle?<div className="text-center"><button className="btn btn-outline-dark mt-auto" onClick={()=>{
                                         setFn(data+1)
                                         setToggle(!toggle)
-                                    }}>Add Cart</button></div>:
+                                    }}>Add to Cart</button></div>:
                                     <div className="text-center"><button className="btn btn-dark mt-auto" onClick={()=>{
                                         setFn(data-1)
                                         setToggle(!toggle)
-                                    }}>Remove Cart</button></div>
+                                    }}>Remove from Cart</button></div>
 
                                   }
                               </div>
