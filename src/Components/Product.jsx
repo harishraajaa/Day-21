@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
 import Star from './Star'
+import { Rating } from '@smastrom/react-rating'
 
 function Product({prod,data,setFn}) {
 
     let [toggle,setToggle]=useState(true)
-    let val=""
+    const [rating, setRating] = useState(3);
+
+    const Display=(rate)=>{
+        setRating(rate)
+        console.log(`The Rating for the Product ${prod.pname} is ${rate}`)
+    }
     // console.log("Call Check")
 
 
@@ -22,7 +28,11 @@ function Product({prod,data,setFn}) {
                                       ₹{prod.pprice}
                                   </div>
                                     <div>
-                                    <Star prod={prod.pname}/>
+                                    <Rating
+                                    style={{ maxWidth: 180 }}
+                                    value={rating}
+                                    onChange={Display}
+                                    />
                                     </div>
                                 </div>
                               {/* <!-- Product actions--> */}
